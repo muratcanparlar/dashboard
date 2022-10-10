@@ -4,17 +4,22 @@ import Navbar from '../../components/navbar/Navbar'
 import './home.scss'
 import Widget from '../../components/widget/Widget'
 
+
 function Home() {
+  
   return (
     <div className='home'>
+      
       <Sidebar/>
       <div className='homeContainer'>
         <Navbar/>  
         <div className="widgets">
-          <Widget/>
-          <Widget/>
-          <Widget/>
-          <Widget/>
+
+            <Widget type="user" />
+            <Widget type="order"/>
+            <Widget type="earning"/>
+            <Widget type="balance"/>
+          
         </div>
       </div>
     </div>
