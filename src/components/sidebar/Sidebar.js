@@ -12,25 +12,36 @@ import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
+import {Link} from 'react-router-dom'
+
+
 function Sidebar() {
   return (
     <div className='sidebar'>
         <div className='top'>
-            <span className='logo'>mcp dasboard</span>
+            <Link to="/" style={{textDecoration: "none"}}>
+                <span className='logo'>mcp dasboard</span>
+            </Link>
         </div>
         <hr/>
         <div className='center'>
             <ul>
                 <p className="title">MAIN</p>
-                <li>
-                    <DashboardIcon className='icon'/>
-                    <span>Dashboard</span> 
-                </li>
+                <Link to="/" style={{textDecoration: "none"}}>
+                    <li>
+                        <DashboardIcon className='icon'/>
+                        <span>Dashboard</span> 
+                    
+                    </li>
+                </Link>
                 <p className="title">LISTS</p>
-                <li>
-                    <Person2OutlinedIcon className='icon'/>
-                    <span>Users</span> 
-                </li>
+                
+                <Link to="/users" style={{textDecoration: "none"}}>
+                    <li>
+                        <Person2OutlinedIcon className='icon'/>
+                        <span>Users</span> 
+                    </li> 
+                </Link>
                 <li>
                     <StoreOutlinedIcon className='icon'/>
                     <span>Products</span> 
