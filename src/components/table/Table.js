@@ -24,7 +24,7 @@ function CreateTable() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
+            <TableCell className='tableCell'>Name</TableCell>
             <TableCell className='tableCell'>Username</TableCell>
             <TableCell className='tableCell'>Email</TableCell>
             <TableCell className='tableCell'>Phone</TableCell>
@@ -38,7 +38,7 @@ function CreateTable() {
               key={user.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell component="th" scope="row" className='tableCell'>
                 {user.name}
               </TableCell>
               <TableCell className='tableCell'>{user.username}</TableCell>

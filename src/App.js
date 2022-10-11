@@ -8,10 +8,14 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
+import './style/dark.scss'
+import { useContext } from "react";
+import { DarkModeContext } from "./contexts/darkModeContext";
 
 function App() {
+  const {darkMode}=useContext(DarkModeContext)
   return (
+    <div className= {darkMode ? "app dark" : "app"}>  
     <BrowserRouter>
     <Routes>
         <Route path="/">
@@ -30,6 +34,7 @@ function App() {
         </Route>
     </Routes>
   </BrowserRouter>
+  </div>
   );
 }
 
